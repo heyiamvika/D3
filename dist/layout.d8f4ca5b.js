@@ -111,14 +111,15 @@ var values = ['airDensity', 'bla-bla'];
 var getLayout = function getLayout(data) {
     data.forEach(function (element) {
         var input = document.createElement('label');
-        var inputData = '\n        <span>' + element + '</span>\n        <span>0</span>\n        <input type="range" min="0" max="100" />\n        <span>100%</span>\n        ';
+        var inputData = '\n        <span>' + element + '</span>\n        <span>0</span>\n        <input type="range" min="0" max="100" value="50" onchange="getUserInputs();"/>\n        <span>100%</span>\n        ';
         input.innerHTML = inputData;
+        input.className = 'user-input';
         form.appendChild(input);
     });
 };
 
 getLayout(values);
-},{}],15:[function(require,module,exports) {
+},{}],53:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -288,5 +289,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[15,25], null)
+},{}]},{},[53,25], null)
 //# sourceMappingURL=/layout.d8f4ca5b.map
