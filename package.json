@@ -1,0 +1,10 @@
+{
+  "name": "cycling",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "<viktoriianosova@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  }
+}
