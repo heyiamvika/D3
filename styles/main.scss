@@ -1,5 +1,23 @@
-body {
+.container {
     margin: auto;
-    width: 500px;
+    width: 1000px;
     border: 3px solid red;
+    padding: 20px;
+    display: flex;
+}
+
+.chart {
+    width: 450px;
+    height: 450px;
+    border: 3px solid blue;
+    margin: auto;
+}
+
+.values {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 450px;
+    border: 3px solid green;
+    margin: auto;
 }
