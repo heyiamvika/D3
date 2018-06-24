@@ -104,17 +104,18 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   // Override the current require with this new one
   return newRequire;
 })({54:[function(require,module,exports) {
-var input = document.querySelectorAll('.user-input');
-var inputValues = [];
+var userInput = document.querySelectorAll('.user-input');
+var inputs = [];
 
-var getUserInputs = function getUserInputs() {
-    input.forEach(function (element) {
-        var inputValue = element.querySelector('input').value;
-        inputValues.push(inputValue);
+var getInputs = function getInputs() {
+    userInput.forEach(function (element) {
+        var input = element.querySelector('input');
+        inputs.push(input);
     });
 };
 
-getUserInputs();
+getInputs();
+console.log(inputs);
 },{}],53:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

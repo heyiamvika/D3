@@ -1,6 +1,6 @@
 let form = document.querySelector('.values');
 
-let values = ['airDensity', 'bla-bla'];
+let values = ['airDensity', 'bla-bla', 'more bla-bla'];
 
 const getLayout = (data) => {
     data.forEach(element => {
@@ -8,7 +8,7 @@ const getLayout = (data) => {
         let inputData = `
         <span>${element}</span>
         <span>0</span>
-        <input type="range" min="0" max="100" value="50" onchange="getUserInputs();"/>
+        <input type="range" min="0" max="100" value="50"/>
         <span>100%</span>
         `;
         input.innerHTML = inputData;

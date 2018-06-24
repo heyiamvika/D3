@@ -1,11 +1,12 @@
-const input = document.querySelectorAll('.user-input');
-const inputValues = [];
+const userInput = document.querySelectorAll('.user-input');
+const inputs = [];
 
-const getUserInputs = () => {
-    input.forEach(element => {
-        let inputValue = element.querySelector('input').value;
-        inputValues.push(inputValue);
-    });
+const getInputs = () => {
+    userInput.forEach(element => {
+        let input = element.querySelector('input');
+        inputs.push(input);
+    })
 };
 
-getUserInputs();
+getInputs();
+console.log(inputs);

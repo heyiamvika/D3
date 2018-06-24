@@ -106,12 +106,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({25:[function(require,module,exports) {
 var form = document.querySelector('.values');
 
-var values = ['airDensity', 'bla-bla'];
+var values = ['airDensity', 'bla-bla', 'more bla-bla'];
 
 var getLayout = function getLayout(data) {
     data.forEach(function (element) {
         var input = document.createElement('label');
-        var inputData = '\n        <span>' + element + '</span>\n        <span>0</span>\n        <input type="range" min="0" max="100" value="50" onchange="getUserInputs();"/>\n        <span>100%</span>\n        ';
+        var inputData = '\n        <span>' + element + '</span>\n        <span>0</span>\n        <input type="range" min="0" max="100" value="50"/>\n        <span>100%</span>\n        ';
         input.innerHTML = inputData;
         input.className = 'user-input';
         form.appendChild(input);
