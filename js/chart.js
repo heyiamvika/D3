@@ -1,5 +1,6 @@
 const userInput = document.querySelectorAll('.user-input');
 const inputs = [];
+const inputValues = [];
 
 const getInputs = () => {
     userInput.forEach(element => {
@@ -8,5 +9,12 @@ const getInputs = () => {
     })
 };
 
+const getInputValues = () => {
+    inputs.forEach(element => {
+        let inputValue = element.value;
+        inputValues.push(inputValue);
+    })
+}
+
 getInputs();
-console.log(inputs);
+getInputValues();

@@ -106,6 +106,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({54:[function(require,module,exports) {
 var userInput = document.querySelectorAll('.user-input');
 var inputs = [];
+var inputValues = [];
 
 var getInputs = function getInputs() {
     userInput.forEach(function (element) {
@@ -114,8 +115,15 @@ var getInputs = function getInputs() {
     });
 };
 
+var getInputValues = function getInputValues() {
+    inputs.forEach(function (element) {
+        var inputValue = element.value;
+        inputValues.push(inputValue);
+    });
+};
+
 getInputs();
-console.log(inputs);
+getInputValues();
 },{}],53:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
