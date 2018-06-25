@@ -1,9 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 .container {
     margin: auto;
     width: 1000px;
     border: 3px solid red;
     padding: 20px;
     display: flex;
+    align-items: flex-start;
 }
 
 .container {
@@ -11,7 +16,6 @@
         display: flex;
         flex-direction: column;
         width: 450px;
-        height: 450px;
         border: 3px solid green;
         margin: auto;
     }
@@ -19,7 +23,7 @@
 
 .chart {
     width: 450px;
-    height: 450px;
     border: 3px solid blue;
     margin: auto;
+    padding: 20px;
 }

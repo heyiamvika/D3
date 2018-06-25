@@ -106,12 +106,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({25:[function(require,module,exports) {
 var form = document.querySelector('.values');
 
-var values = ['airDensity', 'bla-bla', 'more bla-bla'];
+var values = [{ "name": 'airDensity', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'frictionFactor', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'dragCoefficient', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'gravityFactor', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'windDirection', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'windVelocity', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'rollingResistanceCoefficient', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'bikeMass', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'riderMass', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'wheelAerodynamicFactor', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'distanceCovered', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'initialVelocity', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'finalVelocity', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'rideDirection', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'grade', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'timeToCoverDistance', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'momentOfInertiaOfWheels', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'outerTireRadius', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'chainEfficiencyFactor', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }, { "name": 'dragValues', "defaultValue": 1.0, "minValue": 0.0, "maxValue": 2.0 }];
 
 var getLayout = function getLayout(data) {
     data.forEach(function (element) {
+        console.log(element);
         var input = document.createElement('label');
-        var inputData = '\n        <span>' + element + '</span>\n        <span>0</span>\n        <input type="range" min="0" max="100" value="50"/>\n        <span>100%</span>\n        ';
+        var inputData = '\n        <span>' + element.name + '</span>\n        <span>' + element.minValue + '</span>\n        <input type="range" min=' + element.minValue + ' max=' + element.maxValue + ' value=' + element.defaultValue + '/>\n        <span>' + element.maxValue + '</span>\n        ';
         input.innerHTML = inputData;
         input.className = 'user-input';
         form.appendChild(input);
@@ -119,7 +120,7 @@ var getLayout = function getLayout(data) {
 };
 
 getLayout(values);
-},{}],53:[function(require,module,exports) {
+},{}],8:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -148,7 +149,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '55899' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '56950' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -289,5 +290,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[53,25], null)
+},{}]},{},[8,25], null)
 //# sourceMappingURL=/layout.d8f4ca5b.map

@@ -18,3 +18,10 @@ const getInputValues = () => {
 
 getInputs();
 getInputValues();
+
+const chart = d3.select('.chart')
+    .append('svg')
+    .attr('width', 300)
+    .attr('height', 300);
+
+chart.append('circle')
